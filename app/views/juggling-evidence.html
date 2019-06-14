@@ -23,10 +23,9 @@
           </label>
           <input class="govuk-file-upload" id="juggling-evidence-1" name="juggling-evidence" type="file">
           <p>
-            You have uploaded: {{ data['juggling-evidence'] | default('No file uploaded') }}
-            <!-- {% if juggling-evidence %}
-            You have uploaded: {{ data['juggling-evidence'] | default('No file uploaded') }}
-            {% endif %} -->
+            {% if data['juggling-evidence'] %}
+            You have uploaded: {{ data['juggling-evidence'] }}
+            {% endif %}
         </p>
         </div>
 
