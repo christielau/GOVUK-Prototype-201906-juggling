@@ -1,0 +1,43 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Getting started with the GOV.UK Prototype Kit - June 2019
+        <span class="govuk-caption-xl">{{releaseVersion}}</span>
+      </h1>{{releaseVersion | log }}
+      <p>
+        Getting started with the kit, creating and linking pages, moving data through a prototype and publishing a prototype. You’ll get a basic introduction to HTML and CSS.
+        </p>
+        <p><a href="/" role="button" class="govuk-button govuk-!-margin-top-2 govuk-!-margin-bottom-8">Go to Prototype</a></p>
+
+        <h2 class="govuk-heading-m">Useful Links</h2>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li><a href="/">Start page of {% if serviceName %} {{ serviceName }} {% endif %}</a></li>
+          <li>
+            <a href="https://docs.google.com/document/d/1qDkutvVb0FYmUGLMH0EG7bnuX5Ez-yD4IBPmhXqUxew/edit#">
+              Prototype kit tutorial - juggling licence
+            </a>
+          </li>
+          <li><a href="https://docs.google.com/document/d/18hYzCKnJ-101J5-PEDE79-aG8EokLUTlozQr6TzGcd8/edit">Prototype Training Link</a></li>
+        </ul>
+
+      <h2 class="govuk-heading-m">What you’ll need</h2>
+
+      <p>We recommend you add links to your prototype to this page, rather than delete it.
+        You'll find this page in the kit at '/app/views/index.html'.</p>
+
+      <p>You can change the service name by editing the file '/app/config.js'.</p>
+
+    </div>
+</div>
+
+{% endblock %}
