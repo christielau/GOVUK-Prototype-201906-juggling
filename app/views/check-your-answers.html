@@ -20,7 +20,7 @@
             Number of balls you can juggle
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['juggling-balls'] }}
+            {{ data['juggling-balls'] | default('Not answered') }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/juggling-balls">
@@ -34,10 +34,24 @@
             Your most impressive juggling trick
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['juggling-trick'] }}
+            {{ data['juggling-trick'] | default('Not answered') }}
           </dd>
           <dd class="govuk-summary-list__actions">
             <a href="/juggling-trick">
+              Change
+              <span class="govuk-visually-hidden">Your most impressive juggling trick</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Juggling Evidence
+          </dt>
+          <dd class="govuk-summary-list__value">
+            {{ data['juggling-evidence'] | default('Not answered') }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a href="/juggling-evidence">
               Change
               <span class="govuk-visually-hidden">Your most impressive juggling trick</span>
             </a>
